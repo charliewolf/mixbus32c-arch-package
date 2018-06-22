@@ -1,0 +1,18 @@
+pkgbase = mixbus32c
+	pkgdesc = Harrison Mixbus - Digital Audio Workstation
+	pkgver = 4.3.19
+	pkgrel = 3
+	url = http://harrisonconsoles.com/site/mixbus32c.html
+	arch = x86_64
+	license = EULA, GPLv2
+	depends = xorg-server
+	provides = mixbus4
+	provides = mixbus32c
+	conflicts = mixbus4
+	source = http://www.harrisonconsoles.com/mixbus/mb4/releases/Mixbus32C-4.3.19-x86_64-gcc5.tar
+	source = mixbus32c.png
+	sha256sums = a9a9172ef378977314b06e68b0ca16062292f965a7e614cc9e73fc515fa03629
+	sha256sums = bcffc2ef528a43e1b168dfa7ec35bc2210f54c59e60bce17cb56994975a2513e
+
+pkgname = mixbus32c
+
