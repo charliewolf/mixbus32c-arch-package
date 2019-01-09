@@ -3,7 +3,7 @@
 
 pkgname=mixbus32c
 pkgver=4.3.19
-pkgrel=3
+pkgrel=4
 pkgdesc="Harrison Mixbus - Digital Audio Workstation"
 arch=('x86_64')
 url="http://harrisonconsoles.com/site/mixbus32c.html"
@@ -25,7 +25,7 @@ cd $srcdir
 echo "Preparing Installation..."
 
 echo "Unpacking Installer..."
-tar -xf Mixbus32C-$pkgver-64bit-gcc5.tar
+tar -xf Mixbus32C-$pkgver-x86_64-gcc5.tar
 ./Mixbus32C-$pkgver-x86_64-gcc5.run --tar xf 
 find . ! -name "Mixbus32C_x86_64-$pkgver.tar" -type f -exec rm -f {} +
 tar -xf Mixbus32C_x86_64-$pkgver.tar
@@ -58,11 +58,6 @@ echo -e "[Desktop Entry]\nEncoding=UTF-8\nVersion=1.0\nType=Application\nTermina
 
 # Mark as excuteable
 chmod 755 usr/share/applications/mixbus32c.desktop
-
-# Time will tell if this harms anything but this allows me to use plugins that link to gtk/glib/etc
-for lib in libfreetype.so.6  libgio-2.0.so.0  libglib-2.0.so.0  libgobject-2.0.so.0  libharfbuzz.so.0; do
-    rm ./opt/$pkgname/lib/$lib;
-done
 
 ## Remove package and source directories
 echo "Cleaning Up Installation..." 
